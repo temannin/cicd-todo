@@ -1,7 +1,7 @@
 name: Build and deploy to GH Pages
 
 env:
-  APP_ARTIFACT_LOCATION: "build" # location of client code build output
+  APP_LOCATION: "build" # location of client code build output
 
 on:
   push:
@@ -33,4 +33,3 @@ jobs:
           production_branch: master
           action: "upload"
           app_location: ${{ env.APP_LOCATION }}
-          app_artifact_location: ${{ env.APP_ARTIFACT_LOCATION }}
