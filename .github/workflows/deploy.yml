@@ -34,7 +34,7 @@ jobs:
           node-version: 16.x
           cache: "npm"
       - run: npm ci
-      - run: npm build
+      - run: npm run build
       - name: Setup pages
         uses: actions/configure-pages@v2
       - name: Upload build artifacts
