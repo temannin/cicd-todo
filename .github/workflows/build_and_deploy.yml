@@ -27,8 +27,7 @@ jobs:
           retention-days: 1
 
   deploy:
-    environment: staging
     needs: build
     uses: ./.github/workflows/deploy.yml
-    secrets:
-      deployment_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+    with:
+      environment: staging

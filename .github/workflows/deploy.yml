@@ -5,11 +5,13 @@ env:
 
 on:
   workflow_call:
-    secrets:
-      deployment_token:
+    inputs:
+      environment:
         required: true
+        type: string
 
 jobs:
+  environment: ${{ inputs.environment }}
   deploy:
     runs-on: ubuntu-latest
     steps:
