@@ -9,9 +9,9 @@ on:
       environment:
         required: true
         type: string
-  secrets:
-    azure_token:
-      required: true
+    secrets:
+      azure_token:
+        required: true
 
 jobs:
   deploy:
