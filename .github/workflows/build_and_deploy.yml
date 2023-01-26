@@ -26,9 +26,5 @@ jobs:
           path: build
           retention-days: 1
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploying to Staging
-        uses: ./.github/workflows/deploy.yml
+  call-workflow:
+    uses: ./.github/workflows/deploy.yml
