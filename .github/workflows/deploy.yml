@@ -1,7 +1,7 @@
 name: Deploy
 
 env:
-  APP_LOCATION: "build" # location of client code build output
+  APP_LOCATION: "" # location of client code build output
 
 on:
   workflow_call:
@@ -12,6 +12,7 @@ on:
 
 jobs:
   deploy:
+    name: ${{ inputs.environment }}
     environment: ${{ inputs.environment }}
     runs-on: ubuntu-latest
     steps:
