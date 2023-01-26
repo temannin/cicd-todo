@@ -33,3 +33,5 @@ jobs:
     uses: ./.github/workflows/deploy.yml
     with:
       environment: staging
+    secrets:
+      azure_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
