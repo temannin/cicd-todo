@@ -6,12 +6,12 @@ env:
 on:
   workflow_call:
     inputs:
-      environment:
+      test:
         required: true
         type: string
 
 jobs:
-  environment: ${{ inputs.environment }}
+  environment: ${{ inputs.test }}
   deploy:
     runs-on: ubuntu-latest
     steps:
