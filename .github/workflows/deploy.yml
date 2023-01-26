@@ -1,24 +1,25 @@
-# name: Deploy
+name: Deploy
 
-# env:
-#   APP_LOCATION: "build" # location of client code build output
+env:
+  APP_LOCATION: "build" # location of client code build output
 
-# on:
-#   workflow_call:
-#     inputs:
-#       environment:
-#         required: true
-#         type: string
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
 
-# jobs:
-#   deploy:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Deploy
-#         uses: Azure/static-web-apps-deploy@1a947af9992250f3bc2e68ad0754c0b0c11566c9
-#         with:
-#           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
-#           repo_token: ${{ secrets.GITHUB_TOKEN }}
-#           skip_app_build: true
-#           action: "upload"
-#           app_location: ${{ env.APP_LOCATION }}
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ls
+      # - name: Deploy
+      #   uses: Azure/static-web-apps-deploy@1a947af9992250f3bc2e68ad0754c0b0c11566c9
+      #   with:
+      #     azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+      #     repo_token: ${{ secrets.GITHUB_TOKEN }}
+      #     skip_app_build: true
+      #     action: "upload"
+      #     app_location: ${{ env.APP_LOCATION }}
