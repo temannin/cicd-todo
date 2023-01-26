@@ -27,6 +27,7 @@ jobs:
           retention-days: 1
 
   deploy:
+    name: Staging
     needs: build
     uses: ./.github/workflows/deploy.yml
     with:
